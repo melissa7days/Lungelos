@@ -1,0 +1,20 @@
+.navbar{
+    background-color: #0b0d0f !important;
+    /* font-family: Montserrat,sans-serif; */
+    font-size: 16px;
+    font-weight: 550;
+    width: 100%;
+    font-family: 'Oswald', sans-serif;
+
+}
+a{
+    color: #96989a !important;
+
+}
+button{
+    background-color: black !important;
+    border: none !important;
+}
+nav{
+    position: fixed;
+}

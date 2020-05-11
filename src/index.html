@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>CustomMovie</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="../search-element.js"></script>
+</head>
+
+<body>
+
+  <!-- <button onclick="getInputValue();">Search Movie</button> -->
+  <movie-search id="searchid"></movie-search>
+  <div class="row">
+    <div class="col-md-2">
+
+    </div>
+    <div class="col-md-8">
+      <form class="example" action="/action_page.php">
+        <input type="text" placeholder="Search for a movie" name="search" id="param" style="background-color: #212326 !important; color: gray !important; border: none !important; margin-top: 30px; height: 80px; border-radius: 3px; display: block;
+        margin-left: auto; margin-right: auto; text-align:left; font-size: 2.0em; padding-left: 15px; font-family: Montserrat,sans-serif;">
+        <button type="submit" style="height: 80px;margin-top: 30px;"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+    <div class="col-md-2">
+
+    </div>
+  </div>
+  
+  <script>
+    const search = document.querySelector('movie-search');
+    search.addEventListener('serachresult', (event) => {
+      console.log(`"search reasults" emitted: ${event.detail}`)
+    });
+
+    function getInputValue() {
+      document.getElementById('searchid').searchparam = getTextBoxValue('param');
+    }
+
+    function getTextBoxValue(textBoxId) {
+      return document.getElementById(textBoxId).value;
+    }
+  </script>
+</body>
+
+</html>
